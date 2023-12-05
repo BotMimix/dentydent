@@ -1,0 +1,46 @@
+{
+  "name": "dentydent",
+  "version": "1.0.0",
+  "description": "easy to use dental app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "nodemon": "nodemon --exec electron .",
+    "build": "electron-packager .",
+    "dist": "electron-builder"
+  },
+  "repository": "https://github.com/BotMimix/dentydent",
+  "publish": {
+    "provider": "github",
+    "owner": "BotMimix",
+    "repo": "dentydent",
+    "url": "https://github.com/BotMimix/dentydent/releases"
+  },
+  "build": {
+    "publish": {
+      "provider": "github",
+      "releaseType": "release"
+    },
+    "appId": "com.BotMimix.dentydent",
+    "productName": "Dentiva",
+    "win": {
+      "icon": "C:/Users/mimiX/Projects/DentivaLocal/dentydent/app/screens/main/content/dentivaColor.ico",
+      "target": "nsis"
+    },
+    "directories": {
+      "output": "dist"
+    }
+  },
+  "keywords": [],
+  "author": "BotMimix",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1",
+    "electron-packager": "^17.1.2",
+    "nodemon": "^3.0.2"
+  },
+  "dependencies": {
+    "electron-updater": "^6.1.7"
+  }
+}

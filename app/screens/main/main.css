@@ -1,0 +1,11 @@
+.updatePrompt {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 999;
+  background-color: rgb(213, 179, 223);
+
+  padding: 0.2rem 1rem;
+  border-radius: 1rem;
+  box-shadow: 5px 5px 10px rgb(105, 103, 105);
+}
