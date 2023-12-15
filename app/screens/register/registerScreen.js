@@ -1,13 +1,13 @@
 const { app, BrowserWindow, ipcMain, globalShortcut } = require("electron");
 const path = require("path");
 
-class MainScreen {
+class RegisterScreen {
   window;
 
   position = {
-    width: 530,
-    height: 560,
-    maximized: false,
+    width: 700,
+    height: 600,
+    maximized: true,
   };
 
   constructor() {
@@ -17,12 +17,12 @@ class MainScreen {
       title: "Dentiva",
       show: false,
       autoHideMenuBar: true,
-      fullscreen: false,
-      icon: "content/dentivaColor.ico",
+      fullscreen: true,
+      icon: path.join(__dirname, "content/dentivaColor.ico"),
       acceptFirstMouse: true,
       webPreferences: {
         contextIsolation: true,
-        preload: path.join(__dirname, "./mainPreload.js"),
+        preload: path.join(__dirname, "./registerPreload.js"),
       },
     });
 
@@ -39,7 +39,7 @@ class MainScreen {
     // let wc = this.window.webContents;
     // wc.openDevTools({ mode: "undocked" });
 
-    this.window.loadFile("./screens/main/main.html");
+    this.window.loadFile("./screens/register/register.html");
   }
 
   showMessage(message) {
@@ -62,4 +62,4 @@ class MainScreen {
   }
 }
 
-module.exports = MainScreen;
+module.exports = RegisterScreen;

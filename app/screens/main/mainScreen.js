@@ -18,7 +18,7 @@ class MainScreen {
       show: false,
       autoHideMenuBar: true,
       fullscreen: false,
-      icon: "content/dentivaColor.ico",
+      icon: path.join(__dirname, "content/dentivaColor.ico"),
       acceptFirstMouse: true,
       webPreferences: {
         contextIsolation: true,

@@ -1,9 +1,13 @@
 const { app, BrowserWindow, ipcMain, ipcRenderer } = require("electron");
 const MainScreen = require("./screens/main/mainScreen");
+const RegisterScreen = require("./screens/register/registerScreen");
 const Globals = require("./globals");
 const { autoUpdater, AppUpdater } = require("electron-updater");
 
-let curWindow;
+let mainWindow;
+let registerWindow;
+
+const openWindows = [];
 
 //Basic flags
 autoUpdater.autoDownload = false;

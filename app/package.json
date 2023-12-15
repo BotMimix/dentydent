@@ -6,8 +6,8 @@
   "scripts": {
     "start": "electron .",
     "nodemon": "nodemon --exec electron .",
-    "build": "electron-packager .",
-    "dist": "electron-builder"
+    "dist": "electron-packager .",
+    "build": "electron-builder"
   },
   "repository": "https://github.com/BotMimix/dentydent",
   "publish": {
